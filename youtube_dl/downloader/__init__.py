@@ -54,6 +54,9 @@ def _get_suitable_downloader(info_dict, params={}):
         if params.get('external_downloader_args'):
             params['external_downloader_args'] = None
 
+    if info_dict.get('force_hlsdl') is True:
+        return HlsFD
+
     protocol = info_dict['protocol']
     if protocol.startswith('m3u8') and info_dict.get('is_live'):
         return FFmpegFD
