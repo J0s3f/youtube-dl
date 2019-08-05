@@ -154,7 +154,6 @@ class FragmentFD(FileDownloader):
                 'retries': self.params.get('retries', 0),
                 'nopart': self.params.get('nopart', False),
                 'test': self.params.get('test', False),
-                'hls': ctx['hls'],
             }
         )
         tmpfilename = self.temp_name(ctx['filename'])
